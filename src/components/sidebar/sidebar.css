@@ -1,0 +1,26 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 4rem;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    display: flex;
+    height: 4%;
+    font-weight: bold;
+    font: size 22px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo>img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.logo>span>span {
+    color: var(--pink)
+}
