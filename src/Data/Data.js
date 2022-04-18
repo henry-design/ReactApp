@@ -3,8 +3,8 @@ import{
     UilClipboardAlt,
     UilUsersAlt,
     UilPackage,
-    UilChart, //
-    UilSignOutAlt
+    UilChart, 
+    
 } from "@iconscout/react-unicons";
 
 export const SidebarData =[
