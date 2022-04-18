@@ -1,6 +1,9 @@
 import React from 'react'
 import './sidebar.css'
 import Logo from '../../imgs/logo.png';
+import{UilSignOutAlt} from "@iconscout/react-unicons";
+
+import {SidebarData} from '../../Data/Data';
 const Sidebar = () => {
   return (
    <div className="Sidebar">
@@ -11,10 +14,17 @@ const Sidebar = () => {
        </div>
   {/* ---------------------menu ------------------------- */}
        <div className="menu">
-    <div className="menuItem">
-      <div className="icon">Icon</div>
-      <span>Dashboard</span>
-    </div>
+    
+      {SidebarData.map((item,index)=>{ 
+        return(<div className="menuItem">
+          <item.icon/> 
+          <span>{item.heading}</span>
+        </div>)
+      })}
+      <div className="menuItem active">
+        <UilSignOutAlt/>
+      </div>
+    
     </div>
    </div>
  

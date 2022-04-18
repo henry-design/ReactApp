@@ -24,3 +24,38 @@
 .logo>span>span {
     color: var(--pink)
 }
+
+.menu {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 2rem;
+    height: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    border-radius: 0.7rem;
+}
+
+.menuItem:hover {
+    cursor: pointer;
+}
+
+.active {
+    background: var(--activeItem);
+    margin: left 0;
+}
+
+.active::before {
+    content: '';
+    width: 8px;
+    height: 100%;
+    background: var(--pink);
+}
