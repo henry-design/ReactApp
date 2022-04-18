@@ -9,7 +9,7 @@ const Sidebar = () => {
            <img src={Logo}></img>
            <span>Sh<span>o</span>ps</span>
        </div>
-  {/* ----------menu ---------- */}
+  {/* ---------------------menu ------------------------- */}
        <div className="menu">
     <div className="menuItem">
       <div className="icon">Icon</div>
