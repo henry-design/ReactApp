@@ -41,7 +41,7 @@ export const CardsData =[
                     barValue:'70',
                     value:'25970',
                     png:UilUsdSquare,
-                    Series: [{
+                    series: [{
                         name:'Sales', 
                         data:[31,40,28,51,42,109,100],
                     },
@@ -56,7 +56,7 @@ export const CardsData =[
                     barValue:'80',
                     value:'14278',
                     png:UilMoneyWithdrawal,
-                    Series: [{
+                    series: [{
                         name:'Revenue', 
                         data:[10,67,28,48,42,73,24],
                     },
@@ -71,7 +71,7 @@ export const CardsData =[
                     barValue:'60',
                     value:'4270',
                     png:UilClipboardAlt,
-                    Series: [{
+                    series: [{
                         name:'Expenses', 
                         data:[61,55,45,38,28,78,86],
                     },
