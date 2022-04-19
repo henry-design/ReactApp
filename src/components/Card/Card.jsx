@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import {AnimateSharedLayout} from 'framer-motion'
+import {motion ,AnimateSharedLayout} from 'framer-motion'
 import {UilTimes} from "@iconscout/react-unicons";
 import Chart from "react-apexcharts";
 import './Card.css'
@@ -19,13 +19,14 @@ function Card(props) {
 function CompactCard({param,setExpanded}){
   const Png=param.png;
   return (
-    <div className="CompactCard"
+    <motion.div className="CompactCard"
       style={{
         background:param.color.backGround,
         boxShadow:param.color.boxShadow
       }
     }
     onClick={setExpanded}
+    layoutId="ExpandableCard"
     >
       <div className="radialBar">
        <CircularProgressbar value={param.barValue} text={`${param.barValue}%`} />
@@ -38,7 +39,7 @@ function CompactCard({param,setExpanded}){
 <span><span>$</span>{param.value}</span>
 <span>Last 24Hrs</span>
     </div>
-    </div>
+    </motion.div>
   )
 }
 function ExpandedCard({param,setExpanded}){
@@ -47,16 +48,17 @@ function ExpandedCard({param,setExpanded}){
        chart:{
         type: "area",
         height: "auto",
+        dropShadow: {
+          enabled: true,
+          enabledOnSeries: undefined,
+          top: 0,
+          left: 0,
+          blur: 3,
+          color: '#000',
+          opacity: 0.35
       },
-      dropShadow: {
-        enabled: false,
-        enabledOnSeries: undefined,
-        top: 0,
-        left: 0,
-        blur: 3,
-        color: '#000',
-        opacity: 0.35
-    },
+      },
+      
       fill: {
         colors: ["#fff"],
         opacity: 0.9,
@@ -107,23 +109,23 @@ function ExpandedCard({param,setExpanded}){
   }}
   
   return(
-    <div className="ExpandedCard" 
+    <motion.div className="ExpandedCard" 
     style={{
       background:param.color.backGround,
       boxShadow:param.color.boxShadow
     }
-  }
+  }layoutId="ExpandableCard"
     > 
-    <div>
+    <div class="closebtn">
     <UilTimes onClick={setExpanded}/>
     </div>
-    <span>{param.title}</span>
+    <span className="chartTitle">{param.title}</span>
     <div className="ChartContainer">
      
       <Chart series={param.series} type='area' options={data.options}/>
     </div>
-    <span>Last 24 hours</span>
-    </div>
+    <span className="chartTime" >Last 24 hours</span>
+    </motion.div>
    
   )
 
