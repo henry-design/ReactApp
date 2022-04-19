@@ -10,8 +10,8 @@ const Sidebar = () => {
    <div className="Sidebar">
        {/* logo */}
        <div className="logo">
-           <img src={Logo}></img>
-           <span>Sh<span>o</span>ps</span>
+           <img src={Logo} alt="logo"></img>
+           <span>S<span>ho</span>p</span>
        </div>
   {/* ---------------------menu ------------------------- */}
        <div className="menu">
